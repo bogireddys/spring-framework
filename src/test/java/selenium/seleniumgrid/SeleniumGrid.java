@@ -12,10 +12,11 @@ public class SeleniumGrid {
 
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setCapability("platformName", "Windows");
+        chromeOptions.setCapability("browserName", "chrome");
         chromeOptions.addArguments("start-maximized");
         WebDriver driver = new RemoteWebDriver(new URL("http://192.168.1.12:4444"), chromeOptions);
+
         driver.get("http://www.google.com");
-        Thread.sleep(50000);
         driver.quit();
     }
 }

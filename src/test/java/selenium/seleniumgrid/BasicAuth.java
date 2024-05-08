@@ -11,11 +11,11 @@ import java.net.URL;
 
 public class BasicAuth {
     public static void main(String[] args) throws MalformedURLException, InterruptedException {
-        ClientConfig clientConfig = ClientConfig
-        .defaultConfig()
+        ClientConfig clientConfig = ClientConfig.defaultConfig()
                 .baseUrl(new URL("http://localhost:4444"))
                 .authenticateAs(new UsernameAndPassword("admin", "password"));
         HttpCommandExecutor executor = new HttpCommandExecutor(clientConfig);
+
         RemoteWebDriver driver = new RemoteWebDriver(executor, new ChromeOptions());
         driver.get("https://www.selenium.dev/");
         Thread.sleep(5000);
