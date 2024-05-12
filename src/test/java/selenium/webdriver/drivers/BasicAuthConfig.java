@@ -24,9 +24,10 @@ public class BasicAuthConfig {
         System.out.println("Message after entering Basic Auth details : " + securedMessage);
 
         //CDP Basic Auth Implementation
-        driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
+//        driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
         Predicate<URI> uriPredicate = uri -> uri.toString().contains("herokuapp.com/basic_auth");
         Supplier<Credentials> authentication = UsernameAndPassword.of("admin", "admin");
         ((HasAuthentication) driver).register(uriPredicate, authentication);
+        driver.get("https://the-internet.herokuapp.com/basic_auth");
     }
 }

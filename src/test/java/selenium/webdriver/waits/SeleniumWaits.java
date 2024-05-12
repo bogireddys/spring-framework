@@ -1,4 +1,4 @@
-package selenium.webdriver;
+package selenium.webdriver.waits;
 
 import org.hibernate.query.sqm.TemporalUnit;
 import org.openqa.selenium.By;

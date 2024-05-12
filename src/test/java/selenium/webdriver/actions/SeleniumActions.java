@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.virtualauthenticator.VirtualAuthenticatorOptions;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -28,5 +29,8 @@ public class SeleniumActions {
                 .perform();
         String elementText = driver.findElement(By.xpath("//div[@id='result']/ul/li/span")).getText();
         System.out.println("Element text value : " + elementText);
+
+        //Releasing all actions from last state
+        ((RemoteWebDriver)driver).resetInputState();
     }
 }
