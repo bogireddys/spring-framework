@@ -36,6 +36,20 @@ public class Locators {
         //xpath using starts-with() and index
         driver.findElement(By.xpath("//input[starts-with(@id,'checkBox')][2]")).click();
 
+        driver.get("https://www.lambdatest.com/selenium-playground/input-form-demo");
+
+        //xpath chained xpath
+        driver.findElement(By.xpath("//div[@class='form-group w-4/12 smtablet:w-full']//input[@type='password']")).sendKeys("ChainedXPath");
+
+        //CSS Selector
+        driver.get("https://www.selenium.dev/selenium/web/web-form.html");
+
+        //CSS Selector using ID
+        driver.findElement(By.cssSelector("input#my-text-id")).sendKeys("tag#id");
+
+        //CSS Selector using tag name
+        driver.findElement(By.cssSelector("input[name='my-password']")).sendKeys("htmltag[attribute=value]");
+
         driver.quit();
 
     }

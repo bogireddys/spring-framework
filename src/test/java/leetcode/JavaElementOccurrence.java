@@ -4,7 +4,7 @@ import java.util.*;
 
 public class JavaElementOccurrence {
     public static void main(String[] args) {
-        int[] array = {4, 4, 5, 5, 6};
+        int[] array = {34, 45, 90, 0, 34, 4, 4, 5, 5, 6, 20};
 
         Map<Integer, Integer> map = new HashMap<>();
         int temp = 0;
@@ -22,6 +22,8 @@ public class JavaElementOccurrence {
         }
 
         System.out.println("Map keys : " + map.keySet());
+        Set<Integer> treeSet = new TreeSet<>(map.keySet());
+        System.out.println("Tree Set : " + treeSet);
         System.out.println("Key Occurrence : " + map.values());
 
 
