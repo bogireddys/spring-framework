@@ -12,8 +12,7 @@ public class PrintingNumbersFromString {
             try {
                 int result = Integer.parseInt(s);
                 resultStr.append(result).append(", ");
-            } catch (Exception e) {
-                continue;
+            } catch (Exception ignored) {
             }
         }
         resultStr.deleteCharAt(resultStr.length() - 2);
